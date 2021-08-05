@@ -110,6 +110,8 @@ class ProfileController extends Controller
                 'identitas_sekolah' => $request->identitas_sekolah,
                 'visi_misi' => $request->visi_misi,
                 'sejarah_singkat' => $request->sejarah_singkat,
+                'fasilitas' => $request->fasilitas
+
             ]);
         }
 
