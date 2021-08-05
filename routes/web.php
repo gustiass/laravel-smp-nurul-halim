@@ -45,16 +45,18 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('produk', 'ProdukController');
     });
 
-    // Kategori
-    Route::group(['middleware' => ['permission:manajemen kategori']], function () {
-        Route::resource('kategori', 'KategoriController');
-    });
+    // // Kategori
+    // Route::group(['middleware' => ['permission:manajemen kategori']], function () {
+    //     Route::resource('kategori', 'KategoriController');
+    // });
 
-    // Informasi
-    Route::group(['middleware' => ['permission:manajemen informasi']], function () {
-        Route::resource('informasi', 'InformasiController');
-    });
+    // // Informasi
+    // Route::group(['middleware' => ['permission:manajemen informasi']], function () {
+    //     Route::resource('informasi', 'InformasiController');
+    // });
 
+    Route::resource('kategori', 'KategoriController');
+    Route::resource('informasi', 'InformasiController');
     Route::resource('pengumuman', 'PengumumanController');
     Route::resource('kegiatan', 'KegiatanController');
     Route::resource('galeri', 'GaleriController');
