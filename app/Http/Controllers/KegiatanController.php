@@ -95,8 +95,13 @@ class KegiatanController extends Controller
      * @param  \App\Kegiatan  $kegiatan
      * @return \Illuminate\Http\Response
      */
+    // public function edit(Kegiatan $kegiatan)
+    // {
+    //     return view('kegiatan.edit')->with('kegiatan', $kegiatan);
+    // }
     public function edit(Kegiatan $kegiatan)
     {
+        // dd($kegiatan);
         return view('kegiatan.edit')->with('kegiatan', $kegiatan);
     }
 
@@ -109,6 +114,13 @@ class KegiatanController extends Controller
      */
     public function update(Request $request, Kegiatan $kegiatan)
     {
+
+        if (isset($request->tanggal_agenda)) {
+            $tanggal = $request->tanggal_agenda;
+        } else {
+            $tanggal = $request->tanggal_pengumuman;
+        }
+
         $this->validate($request, [
             'judul' => 'required|string|max:100',
             'deskripsi' => 'required|string',
@@ -120,8 +132,8 @@ class KegiatanController extends Controller
         $kegiatan->update([
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
-            'tanggal' => $request->tanggal,
-            'jam' => $request->jam,
+            'tanggal' => $tanggal,
+            'jam' => date('H:i:s'),
             'jenis' => $request->jenis
         ]);
 
