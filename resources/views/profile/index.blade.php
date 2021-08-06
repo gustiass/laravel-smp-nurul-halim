@@ -124,15 +124,15 @@
                                 </form>
                             </div>
                             <div class="tab-pane" id="sekolah">
-                                <form class="form-horizontal" action="{{ route('profile.update', $user->id)}}" method="POST">
+                                <form class="form-horizontal" action="{{ route('profile.update', $user->id)}}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
                                     <input type="hidden" name="profile" value="sekolah">
                                     <div class="form-group row">
                                         <label for="identitas_sekolah" class="col-sm-3 col-form-label">Identitas Sekolah</label>
                                         <div class="col-sm-9">
-                                            <input type="text" name="identitas_sekolah" value="{{ $profile->identitas_sekolah }}" class="form-control @error('identitas_sekolah') is-invalid @enderror" id="identitas_sekolah" placeholder="Name">
-                                            @error('identitas_sekolah')
+                                            <textarea name="identitas_sekolah" class="form-control summernote @error('sejarah_singkat') is-invalid @enderror" id="identitas_sekolah">{{ $profile->identitas_sekolah }}</textarea>
+                                            @error('sejarah_singkat')
                                                 <div class="text-danger small mt-1">{{ $message }}</div>
                                             @enderror
                                         </div>

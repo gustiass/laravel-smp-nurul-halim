@@ -104,6 +104,7 @@ class ProfileController extends Controller
                 'visi_misi' => 'required|string',
                 'sejarah_singkat' => 'required|string',
                 'fasilitas' => 'required|string',
+                // 'struktur_organisasi' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
 
             $profile->update([
