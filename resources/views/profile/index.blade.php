@@ -169,7 +169,7 @@
 
                                     <div class="form-group">
                                         <label for="struktur_organisasi">Struktur Organisasi</label>
-                                        <input type="file" class="form-control struktur_organisasi @error('struktur_organisasi') is-invalid @enderror" name="struktur_organisasi" id="struktur_organisasi" value="{{ old('struktur_organisasi') }}"  data-height="100" data-width="160" data-default-file="{{ asset('/img/'.$profile->struktur_organisasi) }}">
+                                        <input type="file" class="form-control struktur_organisasi @error('struktur_organisasi') is-invalid @enderror" name="struktur_organisasi" id="struktur_organisasi" value="{{ old('struktur_organisasi') }}"  data-height="100" data-width="160" data-default-file="{{ asset('assets/img/struktur-organisasi/'.$profile->struktur_organisasi) }}">
                                         @error('struktur_organisasi')
                                             <div class="text-danger small mt-1">{{ $message }}</div>
                                         @enderror

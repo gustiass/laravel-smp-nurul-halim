@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Profile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ProfileController extends Controller
 {
@@ -107,13 +108,26 @@ class ProfileController extends Controller
                 // 'struktur_organisasi' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
 
-            $profile->update([
+            // dd(public_path('/assets/img/struktur_organisasi/') . $profile->struktur_organisasi);
+            $input = [
                 'identitas_sekolah' => $request->identitas_sekolah,
                 'visi_misi' => $request->visi_misi,
                 'sejarah_singkat' => $request->sejarah_singkat,
                 'fasilitas' => $request->fasilitas
+            ];
 
-            ]);
+            // upload gambar
+            $input['struktur_organisasi'] = $profile->struktur_organisasi;
+            if($request->hasFile('struktur_organisasi')) {
+                if($profile->photo != NULL) {
+                    unlink(public_path('/assets/img/struktur-organisasi/'). $profile->struktur_organisasi);
+                }
+                $input['struktur_organisasi'] = Str::slug('struktur_organisasi', '-') . '.' . $request->struktur_organisasi->getClientOriginalExtension();
+                $request->struktur_organisasi->move(public_path('/assets/img/struktur-organisasi'), $input['struktur_organisasi']);
+            }
+
+            $profile->update($input);
+
         }
 
 
