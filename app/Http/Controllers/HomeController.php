@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Informasi;
 use App\Galeri;
 use App\Kegiatan;
+use App\Guru;
 use Spatie\Permission\Models\Role;
 // use Spatie\Permission\Models\Permission;
 use Illuminate\Http\Request;
@@ -31,7 +32,7 @@ class HomeController extends Controller
         $informasi = Informasi::count();
         $kegiatan = Kegiatan::count();
         $galeri = Galeri::count();
-
-        return view('home', compact('informasi', 'kegiatan', 'galeri'));
+        $guru = Guru::count();
+        return view('home', compact('informasi', 'kegiatan', 'galeri', 'guru'));
     }
 }

@@ -16,7 +16,7 @@
                 <div class="col-md-6">
                     <h3>Identitas Sekolah</h3>
                     <hr>
-                    <p>{{ $profile->identitas_sekolah }}</p>
+                    <p>{!! $profile->identitas_sekolah !!}</p>
                 </div>
                 <div class="col-md-6">
                     <div class="row">

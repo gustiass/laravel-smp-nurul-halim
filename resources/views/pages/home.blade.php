@@ -2,14 +2,35 @@
 @section('content')
 
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex justify-content-center align-items-center">
+<section id="hero" class="d-flex justify-content-center align-items-center"> --}}
   <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
     <h1 class="text-center">TERWUJUD KULTUR BELAJAR<br>DAN <br>AKHLAKUL KARIMAH</h1>
     {{-- <h2>Terwujud Kultur Belajar dan akhlakul Karimah</h2>
       <a href="courses.html" class="btn-get-started">Get Started</a> --}}
   </div>
-</section><!-- End Hero -->
-
+ </section>
+    <!-- End Hero -->
+{{-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="https://placeimg.com/400/400/tech" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://placeimg.com/400/400/tech" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://placeimg.com/400/400/tech" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div> --}}
 <main id="main">
 
   <!-- ======= About Section ======= -->
@@ -63,7 +84,7 @@
 
         <div class="col-md-6 col-lg-6">
           <h3>Info Kegiatan</h3>
-          @foreach ($kegiatans as $kegiatan)  
+          @foreach ($kegiatans as $kegiatan)
           <div class="row mb-2">
             <div class="col-md-12">
                 <div class="card">

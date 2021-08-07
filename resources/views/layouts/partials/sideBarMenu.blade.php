@@ -24,6 +24,16 @@
         </li>
 
         <li class="nav-item">
+            <a href="{{ route('guru.index') }}"
+                class="nav-link {{ request()->segment(1) == 'guru' ? 'active' : '' }}">
+                <i class="nav-icon fas fa-user"></i>
+                <p>
+                    Guru
+                </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
             <a href="{{ route('kegiatan.index') }}"
                 class="nav-link {{ request()->routeIs('kegiatan') == 'kegiatan' ? 'active' : '' }}">
                 <i class="nav-icon fas fa-random"></i>
@@ -43,7 +53,7 @@
             </a>
         </li>
 
-        @role('admin') 
+        @role('admin')
         <li class="nav-item">
             <a href="{{ route('setting.index') }}" class="nav-link {{ request()->routeIs('setting.index') == 'setting.index' ? 'active' : '' }}">
                 <i class="fas fa-cog nav-icon   "></i>

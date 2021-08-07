@@ -1,7 +1,9 @@
 <?php
 
+use App\Guru;
 use App\Http\Controllers\PengumumanController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,17 +35,17 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/roles/search', 'RoleController@search')->name('roles.search');
         Route::resource('users', 'UserController');
         Route::resource('roles', 'RoleController');
-        // Route::resource('setting', 'SettingController');        
+        // Route::resource('setting', 'SettingController');
     });
 
-    // Produk
-    Route::group(['middleware' => ['permission:manajemen produk']], function () {
-        Route::get('/produk/search', 'ProdukController@search')->name('produk.search');
-        Route::get('/produk/pdf', 'ProdukController@reportPdf')->name('produk.pdf');
-        Route::get('/produk/export/', 'ProdukController@export')->name('produk.export');
-        Route::post('/produk/import/', 'ProdukController@import')->name('produk.import');
-        Route::resource('produk', 'ProdukController');
-    });
+    // // Produk
+    // Route::group(['middleware' => ['permission:manajemen produk']], function () {
+    //     Route::get('/produk/search', 'ProdukController@search')->name('produk.search');
+    //     Route::get('/produk/pdf', 'ProdukController@reportPdf')->name('produk.pdf');
+    //     Route::get('/produk/export/', 'ProdukController@export')->name('produk.export');
+    //     Route::post('/produk/import/', 'ProdukController@import')->name('produk.import');
+    //     Route::resource('produk', 'ProdukController');
+    // });
 
     // // Kategori
     // Route::group(['middleware' => ['permission:manajemen kategori']], function () {
@@ -57,6 +59,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('kategori', 'KategoriController');
     Route::resource('informasi', 'InformasiController');
+    Route::resource('guru', 'GuruController');
     Route::resource('pengumuman', 'PengumumanController');
     Route::resource('kegiatan', 'KegiatanController');
     Route::resource('galeri', 'GaleriController');
@@ -106,9 +109,19 @@ Route::get('/pengumuman', function () {
     return view('pages.informasi.pengumuman', compact('pengumumans'));
 });
 
-Route::get('/guru-staf', function () {
-    return view('pages.informasi.guru-staf');
-});
+Route::get('/gurus', function () {
+    $gurus = Guru::where('jabatan','=', 'Guru')
+        ->orWhere('jabatan','=', 'Staff')
+        // ->get()
+        ->paginate(8);
+
+
+    return view('pages.informasi.guru')
+        ->with('gurus', $gurus);
+
+})->name('guru');
+
+Route::post('/guru', 'GuruController@store')->name('guru.store');
 
 
 Route::get('/gallery', function () {

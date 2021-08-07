@@ -34,7 +34,7 @@
                     <div class="icon">
                         <i class="fas fa-info"></i>
                     </div>
-                    <a href="{{ route('produk.index') }}" class="small-box-footer">More info <i
+                    <a href="{{ route('informasi.index') }}" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                     <div class="icon">
                         <i class="fas fas fa-random"></i>
                     </div>
-                    <a href="{{ route('roles.index') }}" class="small-box-footer">More info <i
+                    <a href="{{ route('kegiatan.index') }}" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
@@ -66,25 +66,25 @@
                     <div class="icon">
                         <i class="fas fa-images"></i>
                     </div>
-                    <a href="{{ route('users.index') }}" class="small-box-footer">More info <i
+                    <a href="{{ route('galeri.index') }}" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
-            {{-- <div class="col-lg-3 col-6">
+            <div class="col-lg-3 col-6">
                 <!-- small box -->
                 <div class="small-box bg-danger">
                     <div class="inner">
-                        <h3>65</h3>
+                        <h3>{{ $guru ?? '' }}</h3>
 
-                        <p>Unique Visitors</p>
+                        <p>Total Guru</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-pie-graph"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ route('guru.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-            </div> --}}
+            </div>
             <!-- ./col -->
         </div>
 

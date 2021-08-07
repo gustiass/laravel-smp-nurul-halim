@@ -66,6 +66,7 @@
           <li class="drop-down"><a href="">Informasi</a>
             <ul>
               <li><a href="/pengumuman">Pengumuman</a></li>
+              <li><a href="/gurus">Guru</a></li>
             </ul>
           </li>
           <li><a href="/gallery">Galeri</a></li>
