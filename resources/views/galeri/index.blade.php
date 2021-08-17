@@ -57,7 +57,7 @@
                                                             <a class="dropdown-item" href="#"
                                                                 onclick="handleDelete ({{ $row->id }})">
                                                                 <i class="fas fa-trash    "></i>
-                                                                Delete
+                                                                Hapus
                                                             </a>
                                                         </li>
                                                     </ul>
@@ -75,7 +75,7 @@
                                             <td colspan="4" class="text-center">Data Tidak Ada</td>
                                         </tr>
                                     @endforelse
-    
+
                                 </tbody>
                             </table>
                             {{ $galeri->appends(['keyword' => request()->query('keyword')])->links() }}

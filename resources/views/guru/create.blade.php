@@ -45,7 +45,7 @@
                             <div class="col-md-5 px-5">
                                 <div class="form-group">
                                     <label for="foto">Gambar guru</label>
-                                    <input type="file" class="form-control gambar @error('foto') is-invalid @enderror" name="foto" id="foto" value="{{ old('foto') }}" data-default-file="{{ old('foto') }}"  data-height="282">
+                                    <input type="file" class="form-control foto @error('foto') is-invalid @enderror" name="foto" id="foto" value="{{ old('foto') }}" data-default-file="{{ old('foto') }}"  data-height="282">
                                     @error('foto')
                                         <div class="text-danger small mt-1">{{ $message }}</div>
                                     @enderror
@@ -62,15 +62,7 @@
                                     @enderror
                                 </div>
 
-                                {{-- <div class="form-group">
-                                    <label for="nama">Nama</label>
-                                    <textarea class="form-control @error('nama') is-invalid @enderror" name="nama" id="nama" placeholder="nama" rows="1">{{ old('nama') }}</textarea>
-                                    @error('nama')
-                                          <div class="text-danger small mt-1">{{ $message }}</div>
-                                      @enderror
-                                </div> --}}
-
-                                  <div class="form-group">
+                                <div class="form-group">
                                       <label for="jabatan">Jabatan</label>
                                       <select name="jabatan" id="jabatan" class="form-control">
                                           <option value="0" selected disabled>- Pilih Jabatan -</option>
@@ -90,15 +82,6 @@
                                             <div class="text-danger small mt-1">{{ $message }}</div>
                                         @enderror
                                     </div>
-
-                                {{-- <div class="form-group">
-                                    <label for="mapel">Mata Pelajaran</label>
-                                    <textarea class="form-control @error('mapel') is-invalid @enderror" name="mapel" id="mapel" placeholder="mapel" rows="1">{{ old('mapel') }}</textarea>
-                                    @error('mapel')
-                                          <div class="text-danger small mt-1">{{ $message }}</div>
-                                      @enderror
-                                </div> --}}
-
 
                                   <div class="form-group d-flex justify-content-end">
                                     <a class="btn btn-default " href="{{ route('guru.index') }}">Batal</a>

@@ -28,7 +28,6 @@
                 <div class="small-box bg-info">
                     <div class="inner">
                         <h3>{{ $informasi }}</h3>
-
                         <p>Total Informasi</p>
                     </div>
                     <div class="icon">
@@ -44,7 +43,6 @@
                 <div class="small-box bg-success">
                     <div class="inner">
                         <h3>{{ $kegiatan }}</h3>
-
                         <p>Kegiatan</p>
                     </div>
                     <div class="icon">
@@ -60,7 +58,6 @@
                 <div class="small-box bg-warning">
                     <div class="inner">
                         <h3>{{ $galeri }}</h3>
-
                         <p>Total Galeri</p>
                     </div>
                     <div class="icon">
@@ -76,7 +73,6 @@
                 <div class="small-box bg-danger">
                     <div class="inner">
                         <h3>{{ $guru ?? '' }}</h3>
-
                         <p>Total Guru</p>
                     </div>
                     <div class="icon">

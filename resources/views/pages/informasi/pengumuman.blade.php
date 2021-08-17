@@ -10,21 +10,6 @@
     </div><!-- End Breadcrumbs -->
 
     <section id="pengumuman" class="pengumuman">
-        <div class="container">
-            <div class="row mt-5">
-                <div class="col-md-4">
-                    <h3></h3>
-                </div>
-                <div class="col-md-4 offset-md-4">
-                    {{-- <form class="form-inline">
-                        <label class="sr-only" for="search">Search</label>
-                        <input type="text" class="form-control mb-2 mr-sm-2" id="search" placeholder="Search">
-
-                        <button type="submit" class="btn btn-success mb-2">Submit</button>
-                    </form> --}}
-                </div>
-            </div>
-        </div>
         <!-- isi pengumuman -->
         @foreach ($pengumumans as $pengumuman)
         <div class="container">

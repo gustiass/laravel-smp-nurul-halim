@@ -101,10 +101,11 @@ class ProfileController extends Controller
             $profile = Profile::findOrFail(1);
 
             $this->validate($request, [
-                'identitas_sekolah' => 'required|string|max:255',
+                'identitas_sekolah' => 'required|string',
                 'visi_misi' => 'required|string',
                 'sejarah_singkat' => 'required|string',
                 'fasilitas' => 'required|string',
+                'sambutan' => 'required|string',
                 // 'struktur_organisasi' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
 
@@ -113,7 +114,8 @@ class ProfileController extends Controller
                 'identitas_sekolah' => $request->identitas_sekolah,
                 'visi_misi' => $request->visi_misi,
                 'sejarah_singkat' => $request->sejarah_singkat,
-                'fasilitas' => $request->fasilitas
+                'fasilitas' => $request->fasilitas,
+                'sambutan' => $request->sambutan
             ];
 
             // upload gambar

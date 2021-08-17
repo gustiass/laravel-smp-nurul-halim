@@ -27,6 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  @yield('style')
 
   <!-- =======================================================
   * Template Name: Mentor - v2.2.1
@@ -48,13 +49,12 @@
 
       <nav class="nav-menu d-none d-lg-block ml-auto">
         <ul>
-          <li class="active"><a href="/">Beranda</a></li>
+          <li><a href="/">Beranda</a></li>
           <li><a href="/profile">Profile</a></li>
           <li class="drop-down"><a href="">Kesiswaan</a>
             <ul>
-              <li><a href="/osis">Osis</a></li>
               <li><a href="/ekstrakulikuler">Ekstrakulikuler</a></li>
-              <li><a href="/prestasi">Prestasi Sekolah</a></li>
+              <li><a href="/prestasi-siswa">Prestasi Siswa</a></li>
             </ul>
           </li>
           <li class="drop-down"><a href="">Berita</a>
@@ -66,14 +66,15 @@
           <li class="drop-down"><a href="">Informasi</a>
             <ul>
               <li><a href="/pengumuman">Pengumuman</a></li>
-              <li><a href="/gurus">Guru</a></li>
+              <li><a href="/gurus">Guru Pengajar</a></li>
+              <li><a href="/prestasi-sekolah">Prestasi Sekolah</a></li>
             </ul>
           </li>
           <li><a href="/gallery">Galeri</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="courses.html" class="get-started-btn">Kontak</a>
+      <a href="/kontak" class="get-started-btn">Contact</a>
 
     </div>
   </header><!-- End Header -->
@@ -98,20 +99,21 @@
           <div class="col-lg-3 col-md-4 footer-links">
             <h3>Menu Utama</h3>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Profil</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Artikel</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Galeri</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Beranda</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/profile">Profil Sekolah</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/artikel">Artikel</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/gallery">Galeri</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/contact">Contact </a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h3>Akademik</h3>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Kesiswaan</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Pengumuman</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Prestasi Sekolah</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/guru">Guru Pengajar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/pengumuman">Pengumuman</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/prestasi-siswa">Prestasi Siswa</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/prestasi-sekolah">Prestasi Sekolah</a></li>
             </ul>
           </div>
 
@@ -165,6 +167,8 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  @yield('script')
 
 </body>
 

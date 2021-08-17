@@ -3,8 +3,8 @@
 @section('content')
 <div class="login-box">
     <div class="login-logo">
-        <a href="#">Starter App </a> <br>
-        <h6>Laravel 7 AdminLTE 3</h6>
+        <a href="#">Selamat Datang </a> <br>
+        <h6>Silakan Log In Terlebih Dahulu</h6>
     </div>
     <!-- /.login-logo -->
     <div class="card">
@@ -60,31 +60,7 @@
                     <!-- /.col -->
                 </div>
             </form>
-
-            {{-- <p class="mb-1">
-                <a href="forgot-password.html">I forgot my password</a>
-            </p> --}}
-            <div class="callout callout-info mt-3 small">
-                <h6>Admin</h6>
-                <span>username : admin@admin.com</span><br>
-                <span>password : password</span><br><br>
-                <h6>User</h6>
-                <span>username : user1@example.com</span><br>
-                <span>password : password</span>
-            </div>
         </div>
-        <!-- /.login-card-body -->
-        
-    </div>
-    <div class="d-flex justify-content-center">
-        <a href="https://github.com/isengoding" target="blank" class="mx-2 btn btn-default" title="github.com/isengoding">
-            <i class="fab fa-github"></i>
-            <span>Github</span>
-        </a>
-        <a href="http://isengoding.my.id/" target="blank" class="mx-2 btn btn-default" title="isengoding.my.id">
-            <i class="fas fa-globe-asia"></i>
-            <span>Website</span>
-        </a>
     </div>
 </div>
 <!-- /.login-box -->

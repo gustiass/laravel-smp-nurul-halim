@@ -55,7 +55,7 @@
                 </div>
                 <!-- /.card -->
 
-                
+
             </div>
             <!-- /.col -->
             <div class="col-md-9">
@@ -140,7 +140,7 @@
                                     <div class="form-group row">
                                         <label for="visi_misi" class="col-sm-3 col-form-label">Visi dan Misi</label>
                                         <div class="col-sm-9">
-                                            <textarea name="visi_misi" id="visi_misi" class="form-control summernote" placeholder="visi_misi">{{ $profile->visi_misi }}</textarea> 
+                                            <textarea name="visi_misi" id="visi_misi" class="form-control summernote" placeholder="visi_misi">{{ $profile->visi_misi }}</textarea>
                                             @error('visi_misi') is-invalid @enderror
                                                 @error('visi_misi')
                                                     <div class="text-danger small mt-1">{{ $message }}</div>
@@ -162,6 +162,16 @@
                                         <div class="col-sm-9">
                                             <textarea name="fasilitas" class="form-control summernote @error('fasilitas') is-invalid @enderror" id="fasilitas">{{ $profile->fasilitas }}</textarea>
                                             @error('fasilitas')
+                                                <div class="text-danger small mt-1">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="sambutan" class="col-sm-3 col-form-label">Sambutan Kepala Sekolah</label>
+                                        <div class="col-sm-9">
+                                            <textarea name="sambutan" class="form-control summernote @error('sambutan') is-invalid @enderror" id="sambutan">{{ $profile->sambutan }}</textarea>
+                                            @error('sambutan')
                                                 <div class="text-danger small mt-1">{{ $message }}</div>
                                             @enderror
                                         </div>

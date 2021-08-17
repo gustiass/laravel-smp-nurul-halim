@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Form Admin SMP NH</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='icon' href='{{asset('/img/'.\Setting::getSetting()->favicon)}}' type='image/x-icon' />
@@ -48,13 +48,6 @@
             </form>
 
             <!-- Right navbar links -->
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-            </ul>
         </nav>
         <!-- /.navbar -->
 

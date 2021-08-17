@@ -55,7 +55,7 @@ class InformasiController extends Controller
         $this->validate($request, [
             'judul' => 'required|string|max:100',
             'deskripsi' => 'required|string',
-            'gambar' => 'image|mimes:jpg,png,jpeg|max:2000'
+            'gambar' => 'image|mimes:jpg,png,jpeg'
         ]);
 
         $gambar = '';

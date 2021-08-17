@@ -15,12 +15,12 @@ class CreateProfileTable extends Migration
     {
         Schema::create('profile', function (Blueprint $table) {
             $table->id();
-            $table->string('identitas_sekolah');
+            $table->text('identitas_sekolah');
             $table->string('struktur_organisasi');
-            $table->string('struktur_osis');
+            $table->text('sambutan');
             $table->text('visi_misi');
             $table->text('sejarah_singkat');
-            $table->string('fasilitas');
+            $table->text('fasilitas');
             $table->timestamps();
         });
     }

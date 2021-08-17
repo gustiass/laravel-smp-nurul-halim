@@ -39,14 +39,14 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        
+
                         <form action="{{ route('kategori.index') }}" method="GET">
                             {{-- @csrf --}}
                             <div class="input-group input-group mb-3 float-right" style="width: 250px;">
                                 <input type="text" name="keyword" class="form-control float-right"
                                 placeholder="Search" value="{{request()->query('keyword')}}">
-    
-                                
+
+
                                 <div class="input-group-append">
                                     <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
                                 </div>
@@ -86,7 +86,7 @@
                                                             <a class="dropdown-item" href="#"
                                                                 onclick="handleDelete ({{ $row->id }})">
                                                                 <i class="fas fa-trash    "></i>
-                                                                Delete
+                                                                Hapus
                                                             </a>
                                                         </li>
                                                     </ul>
@@ -101,7 +101,7 @@
                                             <td colspan="4" class="text-center">Data Tidak Ada</td>
                                         </tr>
                                     @endforelse
-    
+
                                 </tbody>
                             </table>
                             {{ $kategori->appends(['keyword' => request()->query('keyword')])->links() }}

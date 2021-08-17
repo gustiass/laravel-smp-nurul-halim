@@ -38,25 +38,6 @@ Route::group(['middleware' => 'auth'], function () {
         // Route::resource('setting', 'SettingController');
     });
 
-    // // Produk
-    // Route::group(['middleware' => ['permission:manajemen produk']], function () {
-    //     Route::get('/produk/search', 'ProdukController@search')->name('produk.search');
-    //     Route::get('/produk/pdf', 'ProdukController@reportPdf')->name('produk.pdf');
-    //     Route::get('/produk/export/', 'ProdukController@export')->name('produk.export');
-    //     Route::post('/produk/import/', 'ProdukController@import')->name('produk.import');
-    //     Route::resource('produk', 'ProdukController');
-    // });
-
-    // // Kategori
-    // Route::group(['middleware' => ['permission:manajemen kategori']], function () {
-    //     Route::resource('kategori', 'KategoriController');
-    // });
-
-    // // Informasi
-    // Route::group(['middleware' => ['permission:manajemen informasi']], function () {
-    //     Route::resource('informasi', 'InformasiController');
-    // });
-
     Route::resource('kategori', 'KategoriController');
     Route::resource('informasi', 'InformasiController');
     Route::resource('guru', 'GuruController');
@@ -79,20 +60,32 @@ Route::get('/', function () {
 
 Route::get('/profile', function () {
     $profile = \App\Profile::find(1);
+    // $profile = \App\Profile::latest('created_at')->get();
     return view('pages.profile.profile', compact('profile'));
 });
 
-Route::get('/osis', function () {
-    return view('pages.kesiswaan.osis');
-});
 
 Route::get('/ekstrakulikuler', function () {
-    return view('pages.kesiswaan.ekstrakulikuler');
+    $ekstrakulikulers = \App\Informasi::latest('created_at')->where('jenis', 'Ekstrakulikuler')
+    ->paginate(9);
+
+    return view('pages.kesiswaan.ekstrakulikuler', ['ekstrakulikulers'=> $ekstrakulikulers]);
 });
 
 Route::get('/prestasi-siswa', function () {
-    return view('pages.kesiswaan.prestasi-siswa');
+    $prestasis = \App\Informasi::latest('created_at')->where('jenis', 'Prestasi-ssiswa')
+    ->paginate(9);
+
+    return view('pages.kesiswaan.prestasi-siswa', ['prestasis'=> $prestasis]);
 });
+
+Route::get('/prestasi-sekolah', function () {
+    $prestasis = \App\Informasi::latest('created_at')->where('jenis', 'Prestasi-sekolah')
+    ->paginate(9);
+
+    return view('pages.informasi.prestasi-sekolah', ['prestasis'=> $prestasis]);
+});
+
 
 Route::get('/artikel', function () {
     $artikels = \App\Informasi::latest('created_at')->where('jenis', 'Artikel')->get();
@@ -123,16 +116,13 @@ Route::get('/gurus', function () {
 
 Route::post('/guru', 'GuruController@store')->name('guru.store');
 
-
 Route::get('/gallery', function () {
-    $galeris = \App\Galeri::latest()->get();
-    return view('pages.galeri', compact('galeris'));
+    $galeris = \App\Galeri::latest()
+    ->paginate(9);
+
+    return view('pages.galeri', ['galeris'=> $galeris]);
 });
 
 Route::get('/kontak', function () {
     return view('pages.kontak');
-});
-
-Route::get('/download', function () {
-    return view('pages.download');
 });

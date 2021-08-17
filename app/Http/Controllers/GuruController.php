@@ -55,7 +55,7 @@ class GuruController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required|string',
-            'foto' => 'image|mimes:jpg,png,jpeg|max:2000',
+            'foto' => 'image|mimes:jpg,png,jpeg',
             'jabatan' => 'required|string',
             'mapel' => 'required|string'
         ]);

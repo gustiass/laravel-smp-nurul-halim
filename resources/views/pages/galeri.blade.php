@@ -11,21 +11,15 @@
 
     <section id="galeri" class="galeri">
         <div class="container">
-            <div class="row mt-5">
-                <div class="col-md-12">
-                    <h3></h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row mt-5">  
-                @foreach ($galeris as $galeri)    
+            <div class="row">
+                @foreach ($galeris as $galeri)
                     <div class="col-md-4">
-                        <img src="{{ asset('img/gambar/'.$galeri->gambar) }}" alt="..." class="img-thumbnail">
+                        <img src="{{ asset('img/gambar/'.$galeri->gambar) }}" alt="..." class="img-thumbnail" class="card-img-top mt-2" alt="" style="height:300px; max width: 200%; object-fit: contain;">
                     </div>
                 @endforeach
             </div>
+            {{$galeris->links()}} - Jumlah :
+            {{$galeris->count()}} -
         </div>
     </section>
 </main>

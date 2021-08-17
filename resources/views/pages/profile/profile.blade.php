@@ -5,7 +5,7 @@
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
         <div class="container">
-            <h2>PROFIL</h2>
+            <h2>PROFIL SEKOLAH</h2>
         </div>
     </div><!-- End Breadcrumbs -->
 
@@ -21,7 +21,7 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="mx-auto">
-                            <img src="https://placeimg.com/400/400/tech" alt="Logo Sekolah">
+                            <img src="{{asset('assets/img/logo.png')}}" class="img-fluid" alt="" style="width: 350px; height:450px;">
                         </div>
                     </div>
                 </div>
@@ -44,9 +44,25 @@
     </section>
     <!-- end sejarah singkat yayasan -->
 
+    <!-- Struktur Organisasi Sekolah -->
+    <section id="struktur_organisasi" class="struktur_organisasi">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Struktur Organisasi</h3>
+                    <hr>
+                    <img src="{{ asset('assets/img/struktur-organisasi/'.$profile->struktur_organisasi) }}" class="img-fluid" alt="" style="width: 100%; height:80%;">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end struktur organisasi-->
+
+
     <!-- visi dan misi -->
     <section id="visi-misi" class="visi-misi">
-        <div class="container">
+        <div class="container mt-0">
             <div class="row">
                 <div class="col-md-12">
                     <h3>Visi dan Misi</h3>

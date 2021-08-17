@@ -28,11 +28,11 @@
                 <div class="card">
                     <div class="card-header">
                         <div class=" d-flex align-items-center justify-content-between">
-                            
+
                             <a href="{{ route('informasi.index')}}" class="btn">
                                 <i class="fas fa-arrow-left  text-purple  "></i>
                             </a>
-                            
+
                             <span>Form Edit Informasi</span>
                         </div>
                     </div>
@@ -76,7 +76,8 @@
                                       <select name="jenis" id="jenis" class="form-control">
                                           <option value="0" disabled>- Pilih Jenis -</option>
                                           <option value="Ekstrakulikuler"  @if ($informasi->jenis == 'Ekstrakulikuler') {{ "selected" }} @endif>Ekstrakulikuler</option>
-                                          <option value="Prestasi" @if ($informasi->jenis == 'Prestasi') {{ "selected" }} @endif>Prestasi</option>
+                                          <option value="Prestasi-siswa" @if ($informasi->jenis == 'Prestasi-siswa') {{ "selected" }} @endif>Prestasi Siswa</option>
+                                          <option value="Prestasi-sekolah" @if ($informasi->jenis == 'Prestasi-sekolah') {{ "selected" }} @endif>Prestasi Sekolah</option>
                                           <option value="Artikel" @if ($informasi->jenis == 'Artikel') {{ "selected" }} @endif>Artikel</option>
                                       </select>
                                   </div>
@@ -93,7 +94,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                
+
 
                             </div>
                         </div>
@@ -115,7 +116,7 @@
 
 @section('scripts')
 <script>
-    
+
         $(document).ready(function () {
 
             $('.gambar').dropify({

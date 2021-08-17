@@ -28,12 +28,12 @@
                 <div class="card">
                     <div class="card-header">
                         <div class=" d-flex align-items-center justify-content-between">
-                            
+
                             <a href="{{ route('kegiatan.index')}}" class="btn">
                                 <i class="fas fa-arrow-left  text-purple  "></i>
                             </a>
-                            
-                            <span>Form Tambah Kegiatan</span>
+
+                            <span>Form Edit Kegiatan</span>
                         </div>
                     </div>
                     <!-- /.card-header -->
@@ -77,7 +77,7 @@
                                          @enderror
                                     </div>
                                 </div>
-                                  
+
                                 <div>
                                     <div class="form-group" id="agenda" style="display: none">
                                         <label for="tanggal">Tanggal</label>
@@ -101,7 +101,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                
+
 
                             </div>
                         </div>
@@ -123,7 +123,7 @@
 
 @section('scripts')
 <script>
-    
+
         $(document).ready(function () {
 
             $('.gambar').dropify({
@@ -141,11 +141,11 @@
                 if(jenis == 'Pengumuman'){
                     $('#agenda').hide();
                     $('#tanggal_agenda').hide();
-                    $('#pengumuman').show(); 
-                    $('#tanggal_pengumuman').show(); 
+                    $('#pengumuman').show();
+                    $('#tanggal_pengumuman').show();
                 }else{
                     $('#pengumuman').hide();
-                    $('#tanggal_pengumuman').hide(); 
+                    $('#tanggal_pengumuman').hide();
                     $('#agenda').show();
                     $('#tanggal_agenda').show();
                 }

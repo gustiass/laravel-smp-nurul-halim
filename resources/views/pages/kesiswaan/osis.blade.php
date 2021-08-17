@@ -1,4 +1,4 @@
-@extends('layouts.frontend.master')
+{{-- @extends('layouts.frontend.master')
 @section('content')
 <main id="main" class="mt-5">
     <!-- ======= Breadcrumbs ======= -->
@@ -10,12 +10,12 @@
     <!-- End Breadcrumbs -->
 
     <section id="osis" class="osis">
+    @foreach ($profiles as $profil)
         <div class="container">
             <div class="row mx-auto">
                 <div class="col-md-12">
-                    <h3></h3>
-                    <hr>
-                    <img src="https://source.unsplash.com/user/erondu/1040x1386" alt="">
+                        <img src="{{ asset('img/gambar/'.$artikel->gambar) }}" class="img-fluid" alt="">
+
                 </div>
             </div>
             <div class="row mt-3">
@@ -27,4 +27,6 @@
             </div>
         </div>
     </section>
-</main>
+
+    <!-- end artikel -->
+</main> --}}

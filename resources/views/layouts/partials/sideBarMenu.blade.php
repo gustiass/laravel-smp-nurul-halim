@@ -68,7 +68,7 @@
             <a href="{{ route('profile.show', Auth::user()->id) }}" class="nav-link {{ request()->routeIs('profile.show') == 'profile.show' ? 'active' : '' }}">
                 <i class="fas fa-user-ninja nav-icon   "></i>
                 <p>
-                    Profile
+                    Profil
                 </p>
             </a>
         </li>

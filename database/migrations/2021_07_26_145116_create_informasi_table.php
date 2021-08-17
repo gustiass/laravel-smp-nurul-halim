@@ -18,7 +18,7 @@ class CreateInformasiTable extends Migration
             $table->string('judul');
             $table->text('deskripsi');
             $table->string('gambar');
-            $table->enum('jenis', ['Ekstrakulikuler', 'Prestasi', 'Artikel']);
+            $table->enum('jenis', ['Ekstrakulikuler', 'Prestasi-siswa', 'Artikel', 'Prestasi-sekolah']);
             $table->timestamps();
         });
     }
